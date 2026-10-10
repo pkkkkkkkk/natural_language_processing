@@ -1,0 +1,58 @@
+{
+  "run_type": "full_experiment",
+  "class_order": [
+    "business",
+    "politics",
+    "sports"
+  ],
+  "confusion_matrix": [
+    [
+      136,
+      5,
+      2
+    ],
+    [
+      8,
+      134,
+      3
+    ],
+    [
+      2,
+      2,
+      860
+    ]
+  ],
+  "classification_report": {
+    "business": {
+      "precision": 0.9315068493150684,
+      "recall": 0.951048951048951,
+      "f1-score": 0.9411764705882353,
+      "support": 143.0
+    },
+    "politics": {
+      "precision": 0.950354609929078,
+      "recall": 0.9241379310344827,
+      "f1-score": 0.9370629370629371,
+      "support": 145.0
+    },
+    "sports": {
+      "precision": 0.9942196531791907,
+      "recall": 0.9953703703703703,
+      "f1-score": 0.9947946790052054,
+      "support": 864.0
+    },
+    "accuracy": 0.9809027777777778,
+    "macro avg": {
+      "precision": 0.9586937041411124,
+      "recall": 0.9568524174846013,
+      "f1-score": 0.9576780288854593,
+      "support": 1152.0
+    },
+    "weighted avg": {
+      "precision": 0.9809137831932221,
+      "recall": 0.9809027777777778,
+      "f1-score": 0.9808723644346711,
+      "support": 1152.0
+    }
+  }
+}

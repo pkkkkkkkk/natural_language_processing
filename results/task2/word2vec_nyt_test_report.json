@@ -1,0 +1,83 @@
+{
+  "class_order": [
+    "business",
+    "politics",
+    "sports"
+  ],
+  "confusion_matrix": [
+    [
+      132,
+      10,
+      1
+    ],
+    [
+      8,
+      136,
+      1
+    ],
+    [
+      1,
+      0,
+      863
+    ]
+  ],
+  "classification_report": {
+    "business": {
+      "precision": 0.9361702127659575,
+      "recall": 0.9230769230769231,
+      "f1-score": 0.9295774647887324,
+      "support": 143.0
+    },
+    "politics": {
+      "precision": 0.9315068493150684,
+      "recall": 0.9379310344827586,
+      "f1-score": 0.9347079037800687,
+      "support": 145.0
+    },
+    "sports": {
+      "precision": 0.9976878612716763,
+      "recall": 0.9988425925925926,
+      "f1-score": 0.9982648930017352,
+      "support": 864.0
+    },
+    "accuracy": 0.9817708333333334,
+    "macro avg": {
+      "precision": 0.9551216411175675,
+      "recall": 0.9532835167174247,
+      "f1-score": 0.954183420523512,
+      "support": 1152.0
+    },
+    "weighted avg": {
+      "precision": 0.9817214806553345,
+      "recall": 0.9817708333333334,
+      "f1-score": 0.9817387943284702,
+      "support": 1152.0
+    }
+  },
+  "embedding_info": {
+    "corpus_documents": 9215,
+    "corpus_tokens": 6126120,
+    "embedding_seconds": 60.451,
+    "corpus": "NYT training split only"
+  },
+  "coverage": {
+    "train": {
+      "total_tokens": 6126120,
+      "known_tokens": 6108533,
+      "token_coverage": 0.997129178011531,
+      "zero_documents": 0
+    },
+    "validation": {
+      "total_tokens": 762425,
+      "known_tokens": 756589,
+      "token_coverage": 0.9923454766042562,
+      "zero_documents": 0
+    },
+    "test": {
+      "total_tokens": 782173,
+      "known_tokens": 776592,
+      "token_coverage": 0.9928647498699137,
+      "zero_documents": 0
+    }
+  }
+}

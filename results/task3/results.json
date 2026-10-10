@@ -1,0 +1,72 @@
+{
+  "config": {
+    "run_type": "full_experiment",
+    "model_name": "google-bert/bert-base-uncased",
+    "model_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+    "max_length": 64,
+    "epochs": 3,
+    "label2id": {
+      "business": 0,
+      "politics": 1,
+      "sports": 2
+    },
+    "seed": 42,
+    "split_seed": 42,
+    "split_file": "data/split_indices.json",
+    "split_file_sha256": "b2958ee0be6d3067c682bd9b648d38cef882bb80b4f83edcaa20d5a3e0fc4f4d",
+    "dataset_sha256": "de12ebe7f41316b798896bf975da840e2998f82393328d375fe5456a14e9eb2d",
+    "split_sizes": {
+      "train": 9215,
+      "validation": 1152,
+      "test": 1152
+    },
+    "class_counts": {
+      "train": {
+        "business": 1143,
+        "politics": 1161,
+        "sports": 6911
+      },
+      "validation": {
+        "business": 143,
+        "politics": 145,
+        "sports": 864
+      },
+      "test": {
+        "business": 143,
+        "politics": 145,
+        "sports": 864
+      }
+    },
+    "batch_size": 16,
+    "eval_batch_size": 32,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "total_optimizer_steps": 1728,
+    "max_grad_norm": 1.0,
+    "encoder_frozen": false,
+    "trainable_parameters": 109484547,
+    "device": "cuda",
+    "device_name": "Tesla T4",
+    "precision": "FP16 mixed precision",
+    "threads": 4,
+    "python_version": "3.13.15",
+    "torch_version": "2.11.0+cu130",
+    "transformers_version": "4.57.1",
+    "sklearn_version": "1.6.1",
+    "numpy_version": "2.1.3"
+  },
+  "results": [
+    {
+      "method": "bert_base_uncased",
+      "run_type": "full_experiment",
+      "epochs": 3,
+      "max_length": 64,
+      "validation_accuracy": 0.9774305555555556,
+      "validation_macro_f1": 0.9533131284205169,
+      "test_accuracy": 0.9809027777777778,
+      "test_macro_f1": 0.9576780288854593,
+      "training_seconds": 163.863
+    }
+  ]
+}

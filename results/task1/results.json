@@ -1,0 +1,63 @@
+{
+  "config": {
+    "dataset": "C:\\Users\\pkkkkk\\Desktop\\作业一\\HW-1\\nyt.csv",
+    "dataset_sha256": "de12ebe7f41316b798896bf975da840e2998f82393328d375fe5456a14e9eb2d",
+    "seed": 42,
+    "split_sizes": {
+      "train": 9215,
+      "validation": 1152,
+      "test": 1152
+    },
+    "class_counts": {
+      "train": {
+        "business": 1143,
+        "politics": 1161,
+        "sports": 6911
+      },
+      "validation": {
+        "business": 143,
+        "politics": 145,
+        "sports": 864
+      },
+      "test": {
+        "business": 143,
+        "politics": 145,
+        "sports": 864
+      }
+    },
+    "lowercase": true,
+    "token_pattern": "(?u)\\b\\w+\\b",
+    "classifier": "LogisticRegression",
+    "solver": "lbfgs",
+    "C": 1.0,
+    "max_iter": 2000,
+    "threads": 4,
+    "python_version": "3.12.14",
+    "sklearn_version": "1.8.0",
+    "numpy_version": "2.5.3"
+  },
+  "results": [
+    {
+      "method": "binary_bow",
+      "n_features": 61021,
+      "validation_accuracy": 0.9809027777777778,
+      "validation_macro_f1": 0.9550694641357809,
+      "test_accuracy": 0.9887152777777778,
+      "test_macro_f1": 0.9718092900732166,
+      "fit_seconds": 2.182,
+      "n_iter": 19,
+      "converged": true
+    },
+    {
+      "method": "word_frequency",
+      "n_features": 61021,
+      "validation_accuracy": 0.9835069444444444,
+      "validation_macro_f1": 0.9625902950584084,
+      "test_accuracy": 0.9887152777777778,
+      "test_macro_f1": 0.9728943384416581,
+      "fit_seconds": 3.912,
+      "n_iter": 94,
+      "converged": true
+    }
+  ]
+}

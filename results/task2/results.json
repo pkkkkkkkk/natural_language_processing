@@ -1,0 +1,91 @@
+{
+  "config": {
+    "nyt_dataset_sha256": "de12ebe7f41316b798896bf975da840e2998f82393328d375fe5456a14e9eb2d",
+    "ag_dataset_sha256": "06fa7de72a2f1cb41513c35260964518d029ff63ae631a807d3b189fbf246c4b",
+    "glove_file_sha256": "95dde4dfd627ab26608d33e76d1195ec059734bd29089ea52cadb08d07c64544",
+    "split_file": "C:\\Users\\pkkkkk\\Desktop\\作业一\\task1_results\\split_indices.json",
+    "split_file_sha256": "b2958ee0be6d3067c682bd9b648d38cef882bb80b4f83edcaa20d5a3e0fc4f4d",
+    "split_seed": 42,
+    "split_sizes": {
+      "train": 9215,
+      "validation": 1152,
+      "test": 1152
+    },
+    "methods": [
+      "glove",
+      "word2vec_ag",
+      "word2vec_nyt"
+    ],
+    "seed": 42,
+    "vector_size": 100,
+    "token_pattern": "(?u)\\b\\w+\\b",
+    "word2vec": {
+      "sg": 1,
+      "negative": 5,
+      "sample": 0.001,
+      "epochs": 5,
+      "window": 5,
+      "min_count": 2,
+      "workers": 1,
+      "nyt_corpus": "NYT training split only"
+    },
+    "classifier": {
+      "name": "LogisticRegression",
+      "solver": "lbfgs",
+      "C": 1.0,
+      "max_iter": 2000,
+      "threads": 4
+    },
+    "python_version": "3.12.14",
+    "gensim_version": "4.4.0",
+    "sklearn_version": "1.8.0",
+    "numpy_version": "2.5.3"
+  },
+  "results": [
+    {
+      "method": "glove",
+      "vector_size": 100,
+      "embedding_vocabulary": 59707,
+      "validation_accuracy": 0.9774305555555556,
+      "validation_macro_f1": 0.9499728075512047,
+      "test_accuracy": 0.9852430555555556,
+      "test_macro_f1": 0.9646170284241168,
+      "test_token_coverage": 0.9978853782986629,
+      "test_zero_documents": 0,
+      "embedding_seconds": 1.035,
+      "classifier_seconds": 0.051,
+      "n_iter": 59,
+      "converged": true
+    },
+    {
+      "method": "word2vec_ag",
+      "vector_size": 100,
+      "embedding_vocabulary": 37062,
+      "validation_accuracy": 0.9652777777777778,
+      "validation_macro_f1": 0.9228252144356075,
+      "test_accuracy": 0.9756944444444444,
+      "test_macro_f1": 0.9410141727457245,
+      "test_token_coverage": 0.9732808470760305,
+      "test_zero_documents": 0,
+      "embedding_seconds": 35.851,
+      "classifier_seconds": 0.032,
+      "n_iter": 29,
+      "converged": true
+    },
+    {
+      "method": "word2vec_nyt",
+      "vector_size": 100,
+      "embedding_vocabulary": 43434,
+      "validation_accuracy": 0.9678819444444444,
+      "validation_macro_f1": 0.9303619430996067,
+      "test_accuracy": 0.9817708333333334,
+      "test_macro_f1": 0.954183420523512,
+      "test_token_coverage": 0.9928647498699137,
+      "test_zero_documents": 0,
+      "embedding_seconds": 60.451,
+      "classifier_seconds": 0.037,
+      "n_iter": 36,
+      "converged": true
+    }
+  ]
+}

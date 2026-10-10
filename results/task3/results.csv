@@ -1,0 +1,2 @@
+﻿method,run_type,epochs,max_length,validation_accuracy,validation_macro_f1,test_accuracy,test_macro_f1,training_seconds
+bert_base_uncased,full_experiment,3,64,0.9774305555555556,0.9533131284205169,0.9809027777777778,0.9576780288854593,163.863
